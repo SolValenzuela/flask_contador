@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static' ,filename='css/style.css')}}">
+    <title>Contador</title>
+</head>
+<body>
+    <div class="d-flex justify-content-around flex-wrap p-5">
+        <div class="card col-3 bg-dark text-light">
+            <h1>Contador</h1>
+            <p>{{session ['contador']}}</p>
+            <p>N° de Visitas</p>
+            <form action="/destroy" method="get">
+                <button class="btn btn-primary btn-outline-dark">Reset</button>
+            </form>
+            <form action="/contar2" method="get">
+                <button class="btn btn-primary btn-outline-dark">Agrega 2 Visitas</button>     
+            </form>
+        </div>
+    </div>
+</body>
+</html>
